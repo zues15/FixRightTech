@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FixRight Tech — Smartphone Service & Repair</title>
+  <meta name="description" content="Fast, reliable smartphone repair: screen, battery, water damage, diagnostics. Book online." />
+
+  <style>
+    :root{
+      --primary:#0078ff;
+      --secondary:#00bcd4;
+      --text:#1a1a1a;
+      --bg:#f4f8ff;
+      --card:#fff;
+      --muted:#666;
+      --radius:16px;
+      --shadow:0 6px 20px rgba(0,0,0,0.08);
+      font-family:'Poppins',sans-serif;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth;}
+    body{
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    /* Header */
+    header{
+      background:linear-gradient(90deg,var(--primary),var(--secondary));
+      color:#fff;
+      padding:16px 20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:999;
+      box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .logo{
+      font-size:20px;
+      font-weight:700;
+      letter-spacing:0.5px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:white;
+      margin-left:20px;
+      font-weight:500;
+      transition:0.3s;
+    }
+    nav a:hover{
+      color:#ffe680;
+    }
+
+    main{
+      max-width:1000px;
+      margin:auto;
+      padding:30px 20px;
+    }
+
+    /* Banner / Home */
+    .banner{
+      background:url('banner.jpg') center/cover no-repeat;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      text-align:center;
+      color:white;
+      padding:90px 20px;
+      margin-bottom:30px;
+      background-blend-mode:multiply;
+      background-color:rgba(0,0,0,0.5);
+      animation:fadeIn 1.2s ease;
+    }
+
+    .banner h1{
+      font-size:32px;
+      font-weight:700;
+      margin-bottom:10px;
+    }
+    .banner p{
+      font-size:18px;
+      color:#f2f2f2;
+      margin-bottom:20px;
+    }
+    .btn-primary{
+      background:#ffe680;
+      color:#333;
+      padding:12px 22px;
+      border-radius:30px;
+      font-weight:600;
+      text-decoration:none;
+      transition:0.3s;
+    }
+    .btn-primary:hover{
+      background:#fff;
+      transform:scale(1.05);
+    }
+
+    /* Cards */
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:22px;
+      margin-bottom:25px;
+      box-shadow:var(--shadow);
+      animation:fadeInUp 0.7s ease;
+    }
+    h2{color:var(--primary);margin-bottom:12px;}
+    p{color:var(--muted);margin-bottom:10px;}
+
+    /* Form */
+    form input, form select, form textarea{
+      width:100%;
+      padding:10px;
+      margin-bottom:12px;
+      border-radius:10px;
+      border:1px solid #ccc;
+      font-size:15px;
+    }
+    form button{
+      background:var(--primary);
+      color:white;
+      border:none;
+      padding:10px 18px;
+      border-radius:12px;
+      font-size:15px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+    form button:hover{
+      background:var(--secondary);
+    }
+
+    /* Services */
+    ul li{
+      margin-bottom:6px;
+    }
+
+    /* Gallery */
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:14px;
+      margin-top:10px;
+    }
+    .gallery img{
+      width:100%;
+      border-radius:12px;
+      box-shadow:var(--shadow);
+      transition:transform 0.3s;
+    }
+    .gallery img:hover{
+      transform:scale(1.05);
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      color:#777;
+      margin-top:40px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn{
+      from{opacity:0;transform:translateY(20px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+    @keyframes fadeInUp{
+      from{opacity:0;transform:translateY(30px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+
+    /* Responsive */
+    @media(max-width:600px){
+      .banner h1{font-size:26px;}
+      nav a{margin-left:10px;}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">📱 FixRight Tech</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#booking">Book</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header> 
+  <main>
+    <!-- Home Section -->
+    <section id="home">
+      <div class="banner">
+        <h1>Fast, Reliable Smartphone Repairs</h1>
+        <p>Get your device fixed the right way — screen, battery, or system, we’ve got you covered.</p>
+        <a href="#booking" class="btn-primary">Book a Repair Now</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="card">
+      <h2>About Us</h2>
+      <p>At FixRight Tech, we believe every phone deserves a second life. Our skilled technicians repair all major brands using high-quality parts and tools. Whether you need screen replacement, battery service, or full diagnostics, you’ll get dependable results at an affordable price.</p>
+    </section>
+
+     <!--Video-->
+<section class="video">
+    <h2>Watch Our Advocacy Video</h2>
+    <video width="300" height="315" controls>
+      <source src=hi.mp4 type="video/mp4">
+     
+    </video>
+  </section>
+  
+    <!-- Booking -->
+    <section id="booking" class="card">
+      <h2>Book a Repair</h2>
+      <form id="bookingForm" onsubmit="return handleBooking(event)">
+        <input type="text" id="fullname" placeholder="Full Name" required>
+        <input type="tel" id="phone" placeholder="09XXXXXXXXX" required>
+        <select id="brand" required>
+          <option value="">Select Brand</option>
+          <option>Infinix</option><option>Oppo</option><option>Vivo</option><option>Samsung</option><option>iPhone</option>
+        </select>
+        <select id="service" required>
+          <option value="">Select Service</option>
+          <option>Screen Replacement</option>
+          <option>Battery Replacement</option>
+          <option>Water Damage Repair</option>
+          <option>Software Diagnostics</option>
+        </select>
+        <textarea id="notes" rows="3" placeholder="Additional details (optional)"></textarea>
+        <button type="submit">Submit Booking</button>
+        <p id="formNote" style="font-size:14px;color:gray;">We'll contact you shortly.</p>
+      </form>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="card">
+      <h2>Our Services</h2>
+      <ul>
+        <li><b>Screen Replacement</b> — From ₱499</li>
+        <li><b>Battery Replacement</b> — From ₱299</li>
+        <li><b>Water Damage Repair</b> — From ₱799</li>
+        <li><b>Software & Diagnostics</b> — From ₱199</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="card">
+      <h2>Contact Us</h2>
+      <p><b>Address:</b> El Dorado Don Bosco Parañaque City</p>
+      <p><b>Hours:</b> Mon–Sat, 8:00 AM – 8:00 PM</p>
+      <p><b>Phone:</b> 09159817647</p>
+      <p><b>Email:</b> fixrighy.tech00@gmail.com</p>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="card">
+      <h2>Repair Gallery</h2>
+      <p>Actual repair work and testing from our service bench:</p>
+      <div class="gallery">
+        <img src="repair1.jpg" alt="Repair 1">
+        <img src="repair2.jpg" alt="Repair 2">
+        <img src="repair3.jpg" alt="Repair 3">
+      </div>
+    </section>
+
+    <footer>© 2025 FixRight Tech — “We Fix It Right.”</footer>
+  </main>
+
+  <script>
+    function handleBooking(e){
+      e.preventDefault();
+      const form=document.getElementById('bookingForm');
+      const name=form.fullname.value.trim();
+      if(name){
+        document.getElementById('formNote').textContent="Thanks "+name+"! We'll contact you soon.";
+        form.reset();
+      }
+    }
+  </script>
+</body>
+</html>         
+
