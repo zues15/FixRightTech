@@ -3,111 +3,126 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- ✅ External CSS file link -->
   <link rel="stylesheet" href="code.css">
+
+  <!-- Optional: Google Fonts for “Poppins” -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <title>FixRight Tech — Smartphone Service & Repair</title>
   <meta name="description" content="Fast, reliable smartphone repair: screen, battery, water damage, diagnostics. Book online." /> 
-  <style>    
-    :root {
-      --primary:#0078ff;
-      --secondary:#00bcd4;
-      --text:#1a1a1a;
-      --bg:#f4f8ff;
-      --card:#fff;
-      --muted:#666;
-      --radius:16px;
-      --shadow:0 6px 20px rgba(0,0,0,0.08);
-      font-family:'Poppins',sans-serif;
-    }
+</head>
 
-    * { box-sizing:border-box; margin:0; padding:0; scroll-behavior:smooth; }
+<body>
+  <header>
+    <div class="logo">📱 FixRight Tech</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#booking">Book</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    body {
-      background: linear-gradient(to bottom right, #eef5ff, #ffffff);
-      color:var(--text);
-      line-height:1.6;
-      font-family:'Poppins',sans-serif;
-    }
+  <main>
+    <!-- Home Section -->
+    <section id="home">
+      <div class="banner">
+        <h1>Fast, Reliable Smartphone Repairs</h1>
+        <p>Get your device fixed the right way — screen, battery, or system, we’ve got you covered.</p>
+        <a href="#booking" class="btn-primary">Book a Repair Now</a>
+      </div>
+    </section>
 
-    /* Header */
-    header {
-      background:linear-gradient(90deg,var(--primary),var(--secondary));
-      color:#fff;
-      padding:16px 20px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      position:sticky;
-      top:0;
-      z-index:999;
-      box-shadow:0 4px 12px rgba(0,0,0,0.2);
-    }
+    <!-- About -->
+    <section id="about" class="card">
+      <h2>About Us</h2>
+      <p>At FixRight Tech, we believe every phone deserves a second life. Our skilled technicians repair all major brands using high-quality parts and tools. Whether you need screen replacement, battery service, or full diagnostics, you’ll get dependable results at an affordable price.</p>
+    </section>
 
-    .logo {
-      font-size:20px;
-      font-weight:700;
-      letter-spacing:0.5px;
-    }
+    <!-- Video -->
+    <section class="video">
+      <h2>Watch Our Advocacy Video</h2>
+      <video controls>
+        <source src="received_4990930911131510.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </section>
 
-    nav a {
-      text-decoration:none;
-      color:white;
-      margin-left:20px;
-      font-weight:500;
-      transition:0.3s;
-      position:relative;
-    }
-    nav a:hover { color:#ffe680; }
-    nav a::after {
-      content:'';
-      position:absolute;
-      width:0;
-      height:2px;
-      left:0;
-      bottom:-4px;
-      background:#ffe680;
-      transition:width 0.3s ease;
-    }
-    nav a:hover::after { width:100%; }
+    <!-- Booking -->
+    <section id="booking" class="card">
+      <h2>Book a Repair</h2>
+      <form id="bookingForm" onsubmit="return handleBooking(event)">
+        <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+        <input type="tel" id="phone" placeholder="09XXXXXXXXX" required>
+        <select id="brand" required>
+          <option value="">Select Brand</option>
+          <option>Infinix</option>
+          <option>Oppo</option>
+          <option>Vivo</option>
+          <option>Samsung</option>
+          <option>iPhone</option>
+        </select>
+        <select id="service" required>
+          <option value="">Select Service</option>
+          <option>Screen Replacement</option>
+          <option>Battery Replacement</option>
+        </select>
+        <textarea id="notes" rows="3" placeholder="Additional details (optional)"></textarea>
+        <button type="submit">Submit Booking</button>
+        <p id="formNote" style="font-size:14px;color:gray;">We'll contact you shortly.</p>
+      </form>
+    </section>
 
-    main {
-      max-width:1000px;
-      margin:auto;
-      padding:30px 20px;
-    }
+    <!-- Services -->
+    <section id="services" class="card">
+      <h2>Our Services</h2>
+      <ul>
+        <li><b>Screen Replacement</b> — From ₱499</li>
+        <li><b>Battery Replacement</b> — From ₱299</li>
+      </ul>
+    </section>
 
-    /* Banner / Home */
-    .banner {
-      background:url('banner.jpg') center/cover no-repeat;
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      text-align:center;
-      color:white;
-      padding:90px 20px;
-      margin-bottom:30px;
-      background-blend-mode:multiply;
-      background-color:rgba(0,0,0,0.5);
-      animation:fadeIn 1.2s ease;
-    }
+    <!-- Contact -->
+    <section id="contact" class="card">
+      <h2>Contact Us</h2>
+      <p><b>Address:</b> El Dorado Don Bosco Parañaque City</p>
+      <p><b>Hours:</b> Mon–Sat, 8:00 AM – 8:00 PM</p>
+      <p><b>Phone:</b> 09159817647</p>
+     <a href="fixrigth.tech00@gmail.com" target="_blank">Visit the gmail</a>
+      <a href="https://www.facebook.com/profile.php?id=61582828647853" target="_blank">Visit the facebook</a>
+    </section>
+    
 
-    .banner h1 {
-      font-size:32px;
-      font-weight:700;
-      margin-bottom:10px;
-    }
-    .banner p {
-      font-size:18px;
-      color:#f2f2f2;
-      margin-bottom:20px;
-    }
+    <!-- Gallery -->
+    <section id="gallery" class="card">
+      <h2>Repair Gallery</h2>
+      <p>Actual repair work and testing from our service bench:</p>
+      <div class="gallery">
+        <img src="repair1.jpg" alt="Repair 1">
+        <img src="repair2.jpg" alt="Repair 2">
+        <img src="repair3.jpg" alt="Repair 3">
+      </div>
+    </section>
 
-    .btn-primary {
-      background:#ffe680;
-      color:#333;
-      padding:12px 22px;
-      border-radius:30px;
-      font-weight:600;
-      text-decoration:none;
-      transition:0.3s;
+    <footer>© 2025 FixRight Tech — “We Fix It Right.”</footer>
+  </main>
+
+  <script>
+    function handleBooking(e){
+      e.preventDefault();
+      const form = document.getElementById('bookingForm');
+      const name = form.fullname.value.trim();
+      if(name){
+        document.getElementById('formNote').textContent = "Thanks " + name + "! We'll contact you soon.";
+        form.reset();
+      }
+    }
+  </script>
+</body>
+</html>      transition:0.3s;
       animation:pulse 2s infinite;
     }
     .btn-primary:hover {
